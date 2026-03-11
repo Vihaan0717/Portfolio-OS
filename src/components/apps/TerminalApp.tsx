@@ -1,28 +1,25 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const PROMPT = 'guest@portfolio ~ % ';
+const PROMPT = 'rohit@portfolio ~ % ';
 
-const techTree = `├── Frontend
-│   ├── React / TypeScript
-│   ├── Tailwind CSS
-│   ├── Zustand (State)
-│   ├── Framer Motion
-│   └── Vite
-├── Backend
-│   ├── Node.js / Express
-│   ├── PostgreSQL
-│   ├── GraphQL
-│   └── Redis
-├── DevOps
-│   ├── Docker
-│   ├── AWS (EC2, S3, Lambda)
-│   ├── GitHub Actions
-│   └── Vercel
+const techTree = `├── Cloud & DevOps
+│   ├── AWS (S3, Lambda, API Gateway)
+│   ├── Azure
+│   ├── Git / GitHub
+│   └── Salesforce
+├── Programming
+│   ├── Python / Java
+│   ├── Dart / Flutter
+│   ├── React / Node.js
+│   └── Spring
+├── Data & Analytics
+│   ├── SQL / MongoDB / Hive
+│   ├── Tableau / Excel
+│   └── KPI Design
 └── Tools
-    ├── Figma
     ├── VS Code
-    ├── Postman
-    └── Linear`;
+    ├── Git Bash
+    └── Windows`;
 
 const helpText = `Available commands:
   tree        Show tech stack
@@ -34,21 +31,21 @@ const helpText = `Available commands:
 
 const aboutText = `
   ╔══════════════════════════════════════╗
-  ║  Senior Frontend Engineer           ║
-  ║  5+ years building for the web      ║
-  ║  Design systems enthusiast          ║
-  ║  Open source contributor            ║
+  ║  Mugasala Rohit                      ║
+  ║  Cloud & AI Enthusiast               ║
+  ║  6+ Job Simulations completed        ║
+  ║  AWS & IBM Certified                 ║
   ╚══════════════════════════════════════╝`;
 
 const projectsText = `
-  1. E-Commerce Platform    — React, Node.js, Stripe
-  2. AI Chat Application    — WebSockets, OpenAI
-  3. Portfolio OS            — React, Zustand, Tailwind`;
+  1. AWS Employee System — Serverless, S3, Lambda
+  2. Jarvis Voice AI     — React, Node, LLaMA2
+  3. Portfolio OS        — This Desktop Environment`;
 
 const contactText = `
-  Email:    hello@portfolio.dev
-  GitHub:   github.com/developer
-  LinkedIn: linkedin.com/in/developer`;
+  Email:    angerkings00@gmail.com
+  LinkedIn: linkedin.com/in/kanna143
+  Phone:    +91 9154716156`;
 
 const TerminalApp: React.FC = () => {
   const [history, setHistory] = useState<string[]>([
